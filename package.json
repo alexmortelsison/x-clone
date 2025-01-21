@@ -9,12 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/client": "^6.25.0",
+    "@sanity/icons": "^3.5.7",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.70.0",
     "lucide-react": "^0.473.0",
     "next": "15.1.5",
+    "next-sanity": "^9.8.39",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
-    "react-twitter-embed": "^4.0.4"
+    "react-twitter-embed": "^4.0.4",
+    "sanity": "^3.70.0",
+    "styled-components": "^6.1.14"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
