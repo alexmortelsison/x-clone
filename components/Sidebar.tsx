@@ -14,8 +14,8 @@ import {
 
 export default function Sidebar() {
   return (
-    <div className="flex flex-col">
-      <FaXTwitter />
+    <div className="flex flex-col col-span-2 items-center px-4 md:items-start">
+      <FaXTwitter className="m-3 h-8 w-8" />
       <SidebarRow Icon={HomeIcon} title={"Home"} />
       <SidebarRow Icon={Hash} title={"Explore"} />
       <SidebarRow Icon={BellIcon} title={"Notifications"} />
