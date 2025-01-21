@@ -1,8 +1,12 @@
 import { RefreshCwIcon } from "lucide-react";
 import React from "react";
 import TweetBox from "./TweetBox";
+import { client } from "@/sanity/lib/client";
+import { query } from "@/sanity/lib/queries";
+import PostComponent from "./PostComponent";
 
-export default function Feed() {
+export default async function Feed() {
+  const posts = await client.fetch(query);
   return (
     <div className="col-span-7 lg:col-span-5 border-x border-x-gray-200">
       <div className="flex items-center justify-between">
@@ -12,6 +16,11 @@ export default function Feed() {
 
       <div>
         <TweetBox />
+      </div>
+      <div>
+        {posts.map((post: any) => (
+          <PostComponent key={post._id} post={post} />
+        ))}
       </div>
     </div>
   );
